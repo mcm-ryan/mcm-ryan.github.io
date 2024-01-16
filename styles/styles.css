@@ -62,16 +62,34 @@ section {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: #ae2785;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: #acae27;
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: #2730ae;
+}
+
+.active{
+  display: block;
+  animation: scaleAnim 1s ease-in-out;
+  @keyframes scaleAnim {
+    0%{
+      transform: translateY(-100%) scale(0)
+    }
+    
+
+    100% {
+      transform: translateY(0) scale(0)
+    }
+  }
 }
 
 .controls {
@@ -84,13 +102,17 @@ section {
   transform: translateY(-50%);
   align-items: center;
   justify-content: center;
-
   .active-btn {
     background-color: var(--color-secondary) !important;
     transition: all .4 ease-in-out;
     i {
       color: var(--color-white)
     }
+  }
+
+  .control:hover {
+    background-color: #dbe1e8;
+
   }
 
   .control {
